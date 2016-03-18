@@ -1,0 +1,5 @@
+require_once(ABSPATH . '/wp-admin/upgrade-functions.php'); to require_once(ABSPATH . '/wp-admin/upgrade.php'); - disabled
+add_management_page now uses more modern rolse and capabilities
+fixed minor error output issues and a few variable declarations
+overhauled db setup
+minor css tweaks

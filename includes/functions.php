@@ -27,31 +27,31 @@
 			return $status;
 		}
 	}
-	
+
 	if(!function_exists("enclose"))
 	{
 		function enclose($s)
 		{
 			return "\"" . str_replace("\"", "\\\"", $s) . "\"";
-		}			
+		}
 	}
-	
+
 	function ssd_getOption($s)
 	{
-		if($_REQUEST[$s])
+		if(isset($_REQUEST[$s]) && $_REQUEST[$s])
 			return $_REQUEST[$s];
 		elseif(get_option("ssd_" . $s))
 			return get_option("ssd_" . $s);
 		else
 			return "";
 	}
-	
+
 	function ssd_setOption($s, $v = NULL)
 	{
 		//no value is given, set v to the request var
 		if($v === NULL)
 			$v = $_REQUEST[$s];
-		
-		return update_option("ssd_" . $s, $v);		
+
+		return update_option("ssd_" . $s, $v);
 	}
 ?>
