@@ -270,8 +270,9 @@ function ssd_shortcode_handler($atts, $content=null, $code="") {
 					'file' => sanitize_text_field(ssd_swapChars($file)),
 					'title' => sanitize_text_field(stripslashes($title))
 				);
+				ob_start();
 				ssd_get_template_part('download','',$atts);
-				return;
+				return ob_get_clean();
 				/*
 				$file = ssd_swapChars($file);
 				include(dirname(__FILE__) . "/templates/r_download.php");
@@ -341,8 +342,11 @@ function ssd_shortcode_handler($atts, $content=null, $code="") {
 					'postid' => $post->ID,
 					'ssdmsg' => $ssdmsg,
 				);
+
+				ob_start();
 				ssd_get_template_part('emailform','',$atts);
-				return;
+				return ob_get_clean();
+
 				/*
 				$file = ssd_swapChars($file);
 				$postid = $post->ID;
