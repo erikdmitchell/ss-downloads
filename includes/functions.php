@@ -193,6 +193,6 @@ function ssd_load_template( $_template_file, $include_once = true, $atts=array()
 function ssd_get_templates_dir() {
 	global $ssd_template_folder;
 
-	return plugin_dir_path(dirname(__FILE__)).$plugin_template_folder;
+	return plugin_dir_path(dirname(__FILE__)).$ssd_template_folder;
 }
 ?>
