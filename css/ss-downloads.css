@@ -11,6 +11,7 @@
 	min-height: 20px; line-height: 20px; padding: 6px 5px 9px 10px; text-decoration: none !important; font-weight: bold !important;
 	color: #444 !important;
 	box-shadow: none;
+	border-bottom: none;
 }
 #ss-downloads .btn-ss-downloads a:hover {color: #000 !important; text-decoration: underline !important; }
 
