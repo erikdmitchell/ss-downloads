@@ -3,3 +3,4 @@ add_management_page now uses more modern rolse and capabilities
 fixed minor error output issues and a few variable declarations
 overhauled db setup
 minor css tweaks
+integrated template for link download
