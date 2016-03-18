@@ -334,7 +334,15 @@ function ssd_shortcode_handler($atts, $content=null, $code="") {
 				$r = file_get_contents($tpath);
 			else
 			{
-				$r = wp_remote_retrieve_body(wp_remote_get($tpath));
+				//$r = wp_remote_retrieve_body(wp_remote_get($tpath));
+				$atts=array(
+					'file' => sanitize_text_field(ssd_swapChars($file)),
+					'title' => sanitize_text_field(stripslashes($title)),
+					'postid' => $post->ID,
+					'ssdmsg' => $ssdmsg,
+				);
+				ssd_get_template_part('emailform','',$atts);
+				return;
 				/*
 				$file = ssd_swapChars($file);
 				$postid = $post->ID;
